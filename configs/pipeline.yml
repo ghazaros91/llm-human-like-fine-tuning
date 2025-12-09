@@ -1,0 +1,10 @@
+train:
+  dataset: "medical"
+  model: "qwen"
+  finetuning_method: "lora"
+  output_dir: "./outputs"
+  batch_size: 4
+  learning_rate: 2e-5
+  epochs: 3
+  reinforcement_enabled: true
+  adversarial_enabled: true

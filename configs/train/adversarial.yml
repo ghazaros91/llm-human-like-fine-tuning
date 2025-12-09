@@ -1,0 +1,14 @@
+adversarial:
+  enabled: true
+  generator_model: "gemma"
+  discriminator_model: "disc_model"
+  training_strategy: "wgan"
+  batch_size: 4
+  learning_rate: 5e-5
+  epochs: 3
+  n_critic: 5
+  clip_value: 0.01
+  latent_dim: 128
+  optimizer: "rmsprop"
+  sequence_length: 1024
+  adapter_out: "./lora_adversarial"

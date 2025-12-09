@@ -1,0 +1,3 @@
+path: "data/medical.jsonl"
+split: "train"  
+cross_validation: false
