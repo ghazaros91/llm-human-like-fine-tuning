@@ -1,0 +1,9 @@
+torch
+transformers
+datasets
+scikit-learn
+pyyaml
+numpy
+bitsandbytes
+ollama
+peft
