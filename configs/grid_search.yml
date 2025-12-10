@@ -1,0 +1,11 @@
+train:
+  dataset: ["./datasets"]
+  model: ["./models"]
+  finetuning_method: ["lora", "qlora"]
+  output_dir: "./outputs"
+  batch_size: [4, 8, 16, 32]
+  learning_rate: [2e-5, 3e-5, 5e-5]
+  epochs: [3, 5, 11]
+  reinforcement_enabled: [true, false]
+  adversarial_enabled: [true, false]
+
