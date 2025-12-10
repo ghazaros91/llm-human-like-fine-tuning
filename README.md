@@ -44,8 +44,3 @@ python3 main.py
 Fine-tuned HF model → outputs/
 
 Optional GGUF export → outputs/model.gguf
-
-
----
-
-If you want, I can fully regenerate the **complete README.md** including this sectio
