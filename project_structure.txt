@@ -1,15 +1,6 @@
 pipeline
     config_loader.py
     adversarial.py
-    __init__.py
-    __pycache__
-        dataset.cpython-313.pyc
-        finetune.cpython-313.pyc
-        reinforcement.cpython-313.pyc
-        trainer.cpython-313.pyc
-        config_loader.cpython-313.pyc
-        __init__.cpython-313.pyc
-        adversarial.cpython-313.pyc
     dataset.py
     trainer.py
     main.py
@@ -18,11 +9,6 @@ pipeline
 requirements_freeze.txt
 requirements.txt
 adversarial_outputs
-__pycache__
-    model_loader.cpython-313.pyc
-    dataset_loader.cpython-313.pyc
-    finetune_lora.cpython-313.pyc
-    load_config.cpython-313.pyc
 project_structure.txt
 README.md
 structure_script.py
@@ -42,52 +28,6 @@ configs
         reinforcement.yml
         adversarial.yml
 rlhf_outputs
-.git
-    config
-    objects
-        c9
-            b73c147162a9e516fa87b7fee30e26379232fb
-        pack
-        info
-        52
-            ae970f197475b695822a62eebeb22a0674930d
-        41
-            6958d19c62a3b5f0f35c3f71c2f4d98251f3e2
-    HEAD
-    info
-        exclude
-    logs
-        HEAD
-        refs
-            heads
-                main
-            remotes
-                origin
-                    main
-    description
-    hooks
-        commit-msg.sample
-        pre-rebase.sample
-        pre-commit.sample
-        applypatch-msg.sample
-        fsmonitor-watchman.sample
-        pre-receive.sample
-        prepare-commit-msg.sample
-        post-update.sample
-        pre-merge-commit.sample
-        pre-applypatch.sample
-        pre-push.sample
-        update.sample
-        push-to-checkout.sample
-    refs
-        heads
-            main
-        tags
-        remotes
-            origin
-                main
-    index
-    COMMIT_EDITMSG
 main.py
 data
     medical.jsonl
