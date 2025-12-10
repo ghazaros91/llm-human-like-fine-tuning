@@ -1,11 +1,11 @@
 adversarial:
   enabled: true
-  generator_model: "gemma"
-  discriminator_model: "disc_model"
+  generator_model: "llama3.2:1b"
+  discriminator_model: "llama3.2:1b"
   training_strategy: "wgan"
   batch_size: 4
   learning_rate: 5e-5
-  epochs: 3
+  epochs: 11
   n_critic: 5
   clip_value: 0.01
   latent_dim: 128

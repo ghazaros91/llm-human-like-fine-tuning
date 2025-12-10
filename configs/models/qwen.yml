@@ -1,1 +1,1 @@
-model: "models/qwen7b/q4_k_m.gguf"  # llama.cpp GGUF path
+model: "qwen:1.8b"

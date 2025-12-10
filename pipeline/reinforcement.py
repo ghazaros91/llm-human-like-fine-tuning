@@ -1,31 +1,33 @@
 import json
+import random
 import ollama
-from typing import Dict
+import logging
 
-def apply_rlhf(model_name: str, dataset_path: str, rlhf_cfg: Dict):
-    """
-    Emulated RLHF step using Ollama (inference-only).
-    Produces output and prints "reward" placeholder.
-    """
-    if not rlhf_cfg.get("enabled", False):
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+
+def safe_generate(model, prompt):
+    try:
+        resp = ollama.generate(model=model, prompt=prompt, stream=False)
+        return resp.get("response", "")
+    except Exception as e:
+        logger.error(f"Ollama RLHF generation failed: {e}")
+        return ""
+
+
+def apply_rlhf(model_name: str, dataset_path: str, cfg: dict):
+    if not cfg.get("enabled", False):
+        logger.info("RLHF disabled. Skipping.")
         return
 
-    batch_size = rlhf_cfg.get("batch_size", 4)
-
-    print(f"RLHF emulation enabled for Ollama model: {model_name}")
+    logger.info(f"RLHF emulation enabled for Ollama model: {model_name}")
 
     with open(dataset_path, "r") as f:
         dataset = [json.loads(line) for line in f]
 
-    for i in range(0, len(dataset), batch_size):
-        batch = dataset[i:i+batch_size]
-        for example in batch:
-            prompt = example.get("text", "")
-            if not prompt:
-                continue
+    for item in dataset[:cfg.get("num_samples", 32)]:
+        prompt = item.get("text", "")
+        _ = safe_generate(model_name, prompt)
 
-            resp = ollama.generate(model=model_name, prompt=prompt)
-            output = resp.get("response", "")
-            # Emulate reward signal
-            reward = 0.5
-            print(f"Prompt: {prompt}\nGenerated: {output}\nReward: {reward}\n")
+    logger.info("RLHF emulation complete.")

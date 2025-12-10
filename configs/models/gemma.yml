@@ -1,2 +1,2 @@
-model: "google/gemma-2-2b-it"  # HuggingFace or local path
+model: "gemma:2b"  # HuggingFace or local path
 type: "causal-lm"

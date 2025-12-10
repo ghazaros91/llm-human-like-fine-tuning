@@ -1,2 +1,0 @@
-model: "tiiuae/falcon-7b"
-type: "causal-lm"

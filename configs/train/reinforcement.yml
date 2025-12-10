@@ -1,9 +1,9 @@
 reinforcement:
   enabled: true
-  reward_model: "ollama:llama3"
+  reward_model: "llama3.2:1b"
   training_strategy: "ppo"
   batch_size: 4
   learning_rate: 2e-5
-  epochs: 3
+  epochs: 4
   sequence_length: 2048
   adapter_out: "./lora_rlhf"

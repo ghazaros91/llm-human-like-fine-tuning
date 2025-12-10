@@ -1,14 +1,15 @@
 # Setup & Run
 
-## 0. Install and Run Ollama
+## 1. Install Ollama
 ```
 brew install ollama
-ollama serve
-ollama pull llama3.2:1b
-ollama pull nomic-embed-text
+
+## 2. Run Ollama
+
+sh run_ollama.sh
 ```
 
-## 1. Create and activate a virtual environment (Python 3.12)
+## 3. Create and activate a virtual environment (Python 3.12)
 
 ```
 python3 -m venv venv
@@ -25,19 +26,19 @@ python -m venv venv
 
 ```
 
-## 2. Install dependencies
+## 4. Install dependencies
 
 ```
 pip3 install -r requirements.txt
 ```
 
-## 3. Run training
+## 5. Run training
 
 ```
 python3 main.py
 ```
 
-## 4. Output
+## 6. Output
 
 Fine-tuned HF model → outputs/
 
