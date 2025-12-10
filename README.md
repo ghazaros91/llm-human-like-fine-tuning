@@ -3,9 +3,11 @@
 ## 1. Install Ollama
 ```
 brew install ollama
+```
 
 ## 2. Run Ollama
 
+```
 sh run_ollama.sh
 ```
 
@@ -15,7 +17,6 @@ sh run_ollama.sh
 python3 -m venv venv
 source venv/bin/activate
 ```
-
 
 On Windows (PowerShell):
 
